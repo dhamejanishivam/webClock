@@ -79,6 +79,35 @@
             bottom: 20px;
             right: 20px;
         }
+
+        /* Mobile-specific styles */
+        @media screen and (max-width: 768px) {
+            #clock {
+                font-size: 6rem !important; /* Adjusted for smaller screens */
+            }
+
+            #date {
+                font-size: 1.2rem; /* Slightly smaller for mobile */
+            }
+
+            #greeting {
+                font-size: 1.5rem; /* Adjusted size for better readability */
+            }
+
+            #quote {
+                font-size: 1rem; /* Reduced font size for quotes */
+                max-width: 90%; /* Increased max-width for smaller devices */
+            }
+
+            button {
+                padding: 10px 20px; /* Adjusted button size */
+                font-size: 0.9rem; /* Slightly smaller button text */
+            }
+
+            #fullscreen-btn, #secondsToggle {
+                bottom: 15px; /* Adjusted position for smaller screens */
+            }
+        }
     </style>
 </head>
 <body>
@@ -96,11 +125,10 @@
         function secondsToggle() {
             const btn = document.getElementById("secondsToggle");
             showSeconds = !showSeconds;
-            if(showSeconds){
-                document.getElementById("clock").style.fontSize = '13rem'
-            }
-            else{
-                document.getElementById("clock").style.fontSize = '14rem'
+            if (showSeconds) {
+                document.getElementById("clock").style.fontSize = '13rem';
+            } else {
+                document.getElementById("clock").style.fontSize = '14rem';
             }
             updateClock();
             btn.textContent = showSeconds ? "Don't Show Seconds" : "Show Seconds";
