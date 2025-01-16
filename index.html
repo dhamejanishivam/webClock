@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aesthetic Clock</title>
     <style>
+
         body {
             margin: 0;
             display: flex;
@@ -83,7 +84,7 @@
         /* Mobile-specific styles */
         @media screen and (max-width: 768px) {
             #clock {
-                font-size: 6rem !important; /* Adjusted for smaller screens */
+                font-size: 5rem !important; /* Adjusted for smaller screens */
             }
 
             #date {
@@ -104,8 +105,14 @@
                 font-size: 0.9rem; /* Slightly smaller button text */
             }
 
-            #fullscreen-btn, #secondsToggle {
-                bottom: 15px; /* Adjusted position for smaller screens */
+            #secondsToggle {
+                position:static;
+                width: 52%;
+                margin: 0 auto;
+            }
+
+            #fullscreen-btn{
+                display: none;
             }
         }
     </style>
